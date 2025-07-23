@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "voice-agent"
+version = "0.1.0"
+description = "LangChain agent for dialogue and tool orchestration"
+authors = ["Cursor Team <team@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.1.0"
+redis = "^5.0.0"
+openai = "^1.0.0"
+python-dotenv = "^1.0.1"
+
+[tool.poetry.dev-dependencies]
+ruff = "^0.4.0"
+mypy = "^1.8.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api" 

@@ -1,0 +1,54 @@
+version: '3.8'
+services:
+  router:
+    build: ../router
+    image: voice-router:latest
+    ports:
+      - "443:443"
+    environment:
+      - TWILIO_AUTH_TOKEN=${TWILIO_AUTH_TOKEN}
+      - PLAYHT_USER_ID=${PLAYHT_USER_ID}
+      - PLAYHT_API_KEY=${PLAYHT_API_KEY}
+      - AZURE_TTS_KEY=${AZURE_TTS_KEY}
+      - REDIS_URL=redis://redis:6379/0
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    depends_on:
+      - asr
+      - agent
+      - redis
+  asr:
+    build: ../asr
+    image: voice-asr:gpu
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+    ports:
+      - "9000:9000"
+  agent:
+    build: ../agent
+    image: voice-agent:latest
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    depends_on:
+      - redis
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    depends_on:
+      - prometheus 

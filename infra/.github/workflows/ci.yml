@@ -1,0 +1,56 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install Poetry
+        run: pip install poetry
+      - name: Lint router
+        run: |
+          cd router
+          poetry install
+          poetry run ruff .
+          poetry run mypy .
+      - name: Lint asr
+        run: |
+          cd asr
+          poetry install
+          poetry run ruff .
+          poetry run mypy .
+      - name: Lint agent
+        run: |
+          cd agent
+          poetry install
+          poetry run ruff .
+          poetry run mypy .
+      - name: Test router
+        run: |
+          cd router
+          poetry run pytest --cov=.
+      - name: Test agent
+        run: |
+          cd agent
+          poetry run pytest --cov=.
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build router image
+        run: docker buildx build -f router/Dockerfile .
+      - name: Build agent image
+        run: docker buildx build -f agent/Dockerfile .
+      - name: Build asr image (GPU)
+        runs-on: [self-hosted, gpu]
+        run: docker buildx build -f asr/Dockerfile . 

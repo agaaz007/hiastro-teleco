@@ -1,0 +1,22 @@
+syntax = "proto3";
+package proto;
+option go_package = "github.com/d-ashesss/whisper-service/proto/whisperpb";
+
+message TranscribeRequest {
+  bytes chunk = 1;
+  string format = 2;
+  string initial_prompt = 3;
+  string language = 4;
+  uint64 max_line_count = 5;
+  uint64 max_line_width = 6;
+  bool translate = 7;
+}
+
+message TranscribeResponse {
+  string transcription = 1;
+}
+
+service WhisperService {
+  rpc Transcribe(stream TranscribeRequest) returns(TranscribeResponse);
+}
+

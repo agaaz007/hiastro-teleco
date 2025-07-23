@@ -1,0 +1,12 @@
+{
+  "services": [
+    "router",
+    "asr",
+    "agent"
+  ],
+  "tasks": [
+    "test:unit",
+    "test:integration",
+    "deploy:bluegreen"
+  ]
+} 

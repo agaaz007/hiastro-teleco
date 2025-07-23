@@ -1,0 +1,8 @@
+.env
+.env.*
+*.tfstate
+*.tfstate.*
+.terraform/
+poetry.lock
+__pycache__/
+.terraform.lock.hcl 

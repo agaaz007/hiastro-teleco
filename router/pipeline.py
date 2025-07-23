@@ -58,7 +58,7 @@ NGROK_URL = os.getenv("NGROK_URL", "wss://13a727c3a414.ngrok-free.app")
 
 # --- Background Audio Setup ---
 # Path to your background MP3 file (replace with your filename if needed)
-BACKGROUND_MP3_PATH = "Busy call centre sounds ambience for remote work and study (2hrs) [pVqeWrAZq_M].mp3"
+BACKGROUND_MP3_PATH = "edited_call_center.mp3"
 
 # Load and prepare background audio (at startup)
 def load_background_audio():

@@ -1,0 +1,106 @@
+2025-07-23 17:17:42,178 - INFO - 🔑 Using Google API Key starting with: AIzaSyAuJmzx1Hu
+2025-07-23 17:18:01,706 - INFO - 🔌 Exotel WebSocket connected
+2025-07-23 17:18:01,807 - INFO - 🤖 Connecting to Gemini Live API...
+2025-07-23 17:18:02,535 - INFO - b'{\n  "setupComplete": {}\n}\n'
+2025-07-23 17:18:02,535 - INFO - ✅ Connected to Gemini Live API successfully!
+2025-07-23 17:18:02,535 - INFO - 🔧 Config: response_modalities=[<Modality.AUDIO: 'AUDIO'>]
+2025-07-23 17:18:02,535 - INFO - 🔧 Model: gemini-2.5-flash-preview-native-audio-dialog
+2025-07-23 17:18:02,535 - INFO - 🚦 Starting all coroutines (handle_exotel_messages, process_audio_input, receive_gemini_audio, send_audio_to_exotel_continuous)
+2025-07-23 17:18:02,535 - INFO - 🔗 Exotel WebSocket connected
+2025-07-23 17:18:02,535 - INFO - 👂 Waiting for Gemini responses...
+2025-07-23 17:18:02,535 - INFO - 🔊 Starting continuous audio sender...
+2025-07-23 17:18:02,567 - INFO - 🛑 Continuous audio sender stopped
+2025-07-23 17:18:02,628 - INFO - 🎬 Call START event received!
+2025-07-23 17:18:02,628 - INFO - 🔍 Extracted stream_sid: 47a5127d039705bba4ff35748252197n
+2025-07-23 17:18:02,628 - INFO - 🎬 Call started (ID: 47a5127d...)
+2025-07-23 17:18:02,630 - INFO - 🎵 Loaded audio: 68908 bytes, duration: 2.2s
+2025-07-23 17:18:02,630 - INFO - 🎬 Initial audio trigger sent to start conversation
+2025-07-23 17:18:15,431 - INFO - 📞 Call ended - stopping all audio processing
+2025-07-23 17:18:15,698 - INFO - 🧹 Cleaning up Exotel WebSocket connection
+2025-07-23 17:18:20,722 - INFO - 🔌 Exotel WebSocket connected
+2025-07-23 17:18:20,736 - INFO - 🤖 Connecting to Gemini Live API...
+2025-07-23 17:18:22,674 - INFO - b'{\n  "setupComplete": {}\n}\n'
+2025-07-23 17:18:22,674 - INFO - ✅ Connected to Gemini Live API successfully!
+2025-07-23 17:18:22,674 - INFO - 🔧 Config: response_modalities=[<Modality.AUDIO: 'AUDIO'>]
+2025-07-23 17:18:22,674 - INFO - 🔧 Model: gemini-2.5-flash-preview-native-audio-dialog
+2025-07-23 17:18:22,674 - INFO - 🚦 Starting all coroutines (handle_exotel_messages, process_audio_input, receive_gemini_audio, send_audio_to_exotel_continuous)
+2025-07-23 17:18:22,675 - INFO - 🔗 Exotel WebSocket connected
+2025-07-23 17:18:22,675 - INFO - 🎬 Call START event received!
+2025-07-23 17:18:22,675 - INFO - 🔍 Extracted stream_sid: 7c900072e5a1fbbfcd85a65df62e197n
+2025-07-23 17:18:22,675 - INFO - 🎬 Call started (ID: 7c900072...)
+2025-07-23 17:18:22,676 - INFO - 🎵 Loaded audio: 68908 bytes, duration: 2.2s
+2025-07-23 17:18:22,676 - INFO - 🎬 Initial audio trigger sent to start conversation
+2025-07-23 17:18:22,676 - INFO - 👂 Waiting for Gemini responses...
+2025-07-23 17:18:22,676 - INFO - ⏳ Waiting for Gemini turn...
+2025-07-23 17:18:22,676 - INFO - 🔄 Got Gemini turn, processing responses...
+2025-07-23 17:18:22,676 - INFO - 🔊 Starting continuous audio sender...
+2025-07-23 17:18:39,831 - INFO - 🪙 Token Usage for Billing: Input=2554, Output=359
+2025-07-23 17:18:39,831 - INFO -     Total Tokens (including all sources): 2913
+2025-07-23 17:18:39,831 - INFO -     Output token breakdown by modality:
+2025-07-23 17:18:39,831 - INFO -     - AUDIO: 359
+2025-07-23 17:18:39,831 - INFO - 🛑 Turn complete
+2025-07-23 17:18:39,831 - INFO - ⏳ Waiting for Gemini turn...
+2025-07-23 17:18:39,831 - INFO - 🔄 Got Gemini turn, processing responses...
+2025-07-23 17:19:04,530 - INFO - 🪙 Token Usage for Billing: Input=3165, Output=400
+2025-07-23 17:19:04,531 - INFO -     Total Tokens (including all sources): 3565
+2025-07-23 17:19:04,531 - INFO -     Output token breakdown by modality:
+2025-07-23 17:19:04,531 - INFO -     - AUDIO: 400
+2025-07-23 17:19:04,531 - INFO - 🛑 Turn complete
+2025-07-23 17:19:04,531 - INFO - ⏳ Waiting for Gemini turn...
+2025-07-23 17:19:04,531 - INFO - 🔄 Got Gemini turn, processing responses...
+2025-07-23 17:19:29,433 - INFO - 🪙 Token Usage for Billing: Input=3743, Output=447
+2025-07-23 17:19:29,433 - INFO -     Total Tokens (including all sources): 4190
+2025-07-23 17:19:29,433 - INFO -     Output token breakdown by modality:
+2025-07-23 17:19:29,433 - INFO -     - AUDIO: 447
+2025-07-23 17:19:29,433 - INFO - 🛑 Turn complete
+2025-07-23 17:19:29,433 - INFO - ⏳ Waiting for Gemini turn...
+2025-07-23 17:19:29,433 - INFO - 🔄 Got Gemini turn, processing responses...
+2025-07-23 17:19:48,841 - INFO - 🪙 Token Usage for Billing: Input=4469, Output=262
+2025-07-23 17:19:48,842 - INFO -     Total Tokens (including all sources): 4731
+2025-07-23 17:19:48,842 - INFO -     Output token breakdown by modality:
+2025-07-23 17:19:48,842 - INFO -     - AUDIO: 262
+2025-07-23 17:19:48,842 - INFO - 🛑 Turn complete
+2025-07-23 17:19:48,842 - INFO - ⏳ Waiting for Gemini turn...
+2025-07-23 17:19:48,842 - INFO - 🔄 Got Gemini turn, processing responses...
+2025-07-23 17:19:48,987 - WARNING - ⚠️ Gemini audio chunk is all zeros (silent)
+2025-07-23 17:19:51,923 - WARNING - ⚡ Gemini generation interrupted! Clearing audio queue.
+2025-07-23 17:19:51,923 - INFO - 📢 Sent clear message to Exotel due to interruption
+2025-07-23 17:19:51,923 - INFO - 🪙 Token Usage for Billing: Input=4850, Output=95
+2025-07-23 17:19:51,923 - INFO -     Total Tokens (including all sources): 4945
+2025-07-23 17:19:51,923 - INFO -     Output token breakdown by modality:
+2025-07-23 17:19:51,923 - INFO -     - AUDIO: 95
+2025-07-23 17:19:51,923 - INFO - 🛑 Turn complete
+2025-07-23 17:19:51,923 - INFO - ⏳ Waiting for Gemini turn...
+2025-07-23 17:19:51,923 - INFO - 🔄 Got Gemini turn, processing responses...
+2025-07-23 17:19:53,464 - INFO - 🪙 Token Usage for Billing: Input=4962, Output=1
+2025-07-23 17:19:53,465 - INFO -     Total Tokens (including all sources): 4963
+2025-07-23 17:19:53,465 - INFO -     Output token breakdown by modality:
+2025-07-23 17:19:53,465 - INFO -     - TEXT: 1
+2025-07-23 17:19:53,465 - INFO - 🛑 Turn complete
+2025-07-23 17:19:53,465 - INFO - ⏳ Waiting for Gemini turn...
+2025-07-23 17:19:53,465 - INFO - 🔄 Got Gemini turn, processing responses...
+2025-07-23 17:19:59,341 - INFO - 🪙 Token Usage for Billing: Input=5036, Output=1
+2025-07-23 17:19:59,341 - INFO -     Total Tokens (including all sources): 5037
+2025-07-23 17:19:59,341 - INFO -     Output token breakdown by modality:
+2025-07-23 17:19:59,341 - INFO -     - TEXT: 1
+2025-07-23 17:19:59,342 - INFO - 🛑 Turn complete
+2025-07-23 17:19:59,342 - INFO - ⏳ Waiting for Gemini turn...
+2025-07-23 17:19:59,342 - INFO - 🔄 Got Gemini turn, processing responses...
+2025-07-23 17:20:09,519 - INFO - 🪙 Token Usage for Billing: Input=5074, Output=1
+2025-07-23 17:20:09,520 - INFO -     Total Tokens (including all sources): 5075
+2025-07-23 17:20:09,520 - INFO -     Output token breakdown by modality:
+2025-07-23 17:20:09,520 - INFO -     - TEXT: 1
+2025-07-23 17:20:09,520 - INFO - 🛑 Turn complete
+2025-07-23 17:20:09,520 - INFO - ⏳ Waiting for Gemini turn...
+2025-07-23 17:20:09,520 - INFO - 🔄 Got Gemini turn, processing responses...
+2025-07-23 17:20:24,194 - INFO - 🪙 Token Usage for Billing: Input=5128, Output=206
+2025-07-23 17:20:24,195 - INFO -     Total Tokens (including all sources): 5334
+2025-07-23 17:20:24,195 - INFO -     Output token breakdown by modality:
+2025-07-23 17:20:24,195 - INFO -     - AUDIO: 206
+2025-07-23 17:20:24,195 - INFO - 🛑 Turn complete
+2025-07-23 17:20:24,195 - INFO - ⏳ Waiting for Gemini turn...
+2025-07-23 17:20:24,195 - INFO - 🔄 Got Gemini turn, processing responses...
+2025-07-23 17:20:24,464 - WARNING - ⚠️ Gemini audio chunk is all zeros (silent)
+2025-07-23 17:20:27,001 - INFO - 📞 Call ended - stopping all audio processing
+2025-07-23 17:20:27,016 - INFO - 🛑 Continuous audio sender stopped
+2025-07-23 17:22:21,063 - INFO - 🧹 Cleaning up Exotel WebSocket connection

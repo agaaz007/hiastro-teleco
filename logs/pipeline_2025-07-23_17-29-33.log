@@ -1,0 +1,21 @@
+2025-07-23 17:29:33,018 - INFO - 🔑 Using Google API Key starting with: AIzaSyAuJmzx1Hu
+2025-07-23 17:29:35,174 - INFO - 🔌 Exotel WebSocket connected
+2025-07-23 17:29:35,260 - INFO - 🤖 Connecting to Gemini Live API...
+2025-07-23 17:29:37,380 - INFO - b'{\n  "setupComplete": {}\n}\n'
+2025-07-23 17:29:37,381 - INFO - ✅ Connected to Gemini Live API successfully!
+2025-07-23 17:29:37,381 - INFO - 🔧 Config: response_modalities=[<Modality.AUDIO: 'AUDIO'>]
+2025-07-23 17:29:37,381 - INFO - 🔧 Model: gemini-2.5-flash-preview-native-audio-dialog
+2025-07-23 17:29:37,381 - INFO - 🚦 Starting all coroutines (handle_exotel_messages, process_audio_input, receive_gemini_audio, send_audio_to_exotel_continuous)
+2025-07-23 17:29:37,382 - INFO - 🔗 Exotel WebSocket connected
+2025-07-23 17:29:37,382 - INFO - 🎬 Call START event received!
+2025-07-23 17:29:37,382 - INFO - 🔍 Extracted stream_sid: 6e5458c1e4062b5e611173d0e331197n
+2025-07-23 17:29:37,383 - INFO - 🎬 Call started (ID: 6e5458c1...)
+2025-07-23 17:29:37,384 - INFO - 🎵 Loaded audio: 68908 bytes, duration: 2.2s
+2025-07-23 17:29:37,385 - INFO - 🎬 Initial audio trigger sent to start conversation
+2025-07-23 17:29:37,386 - INFO - 👂 Waiting for Gemini responses...
+2025-07-23 17:29:37,386 - INFO - ⏳ Waiting for Gemini turn...
+2025-07-23 17:29:37,386 - INFO - 🔄 Got Gemini turn, processing responses...
+2025-07-23 17:29:37,386 - INFO - 🔊 Starting continuous audio sender...
+2025-07-23 17:29:41,348 - INFO - 📞 Call ended - stopping all audio processing
+2025-07-23 17:29:41,368 - INFO - 🛑 Continuous audio sender stopped
+2025-07-23 17:30:34,111 - INFO - 🧹 Cleaning up Exotel WebSocket connection

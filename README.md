@@ -1,25 +1,3 @@
-
-hiastro-teleco
-=======
-# Convo-AI: Real-Time Conversational Voice Agent
-
-## Overview
-A cloud-native, phone-grade conversational voice agent supporting real-time barge-in, natural overlap, and low-latency operation. Integrates Twilio PSTN, Pipecat, faster-whisper, LangChain, PlayHT/Azure TTS, Redis, and Grafana. Designed for compliance (TRAI), reliability, and developer velocity.
-
-## Architecture
-- **router/**: Pipecat pipeline (VAD, ASR, Agent, TTS), FastAPI WebSocket server
-- **asr/**: GPU-accelerated faster-whisper-server
-- **agent/**: LangChain agent, tool orchestration
-- **infra/**: Terraform, Docker Compose, CI/CD, monitoring
-
-## Key Features
-- Real-time barge-in (interrupt TTS mid-utterance)
-- <800ms mouth-to-ear latency (p95)
-- Dual-channel recording, 90-day S3 retention (TRAI)
-- Observability: Prometheus, RedisTimeSeries, Grafana
-- Blue-green deploy, GPU autoscaling
-
-## Quickstart
 # Convo-AI Exotel Voice Assistant – Local Setup Guide
 
 ## Overview
@@ -128,4 +106,3 @@ python router/check_status.py
 ---
 
 **For any issues or advanced configuration, see the documentation in the `router/` folder.**
-

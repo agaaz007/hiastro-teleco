@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-=======
 <<<<<<< HEAD
 # hiastro-teleco
 hiastro-teleco

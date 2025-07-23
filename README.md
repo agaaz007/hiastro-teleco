@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-# hiastro-teleco
 hiastro-teleco
 =======
 # Convo-AI: Real-Time Conversational Voice Agent

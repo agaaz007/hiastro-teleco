@@ -54,7 +54,7 @@ if sys.version_info < (3, 11, 0):
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 logger.info(f"🔑 Using Google API Key starting with: {GOOGLE_API_KEY[:15] if GOOGLE_API_KEY else 'None'}")
 
-NGROK_URL = os.getenv("NGROK_URL", "wss://ff2e067cabe4.ngrok-free.app")
+NGROK_URL = os.getenv("NGROK_URL", "wss://13a727c3a414.ngrok-free.app")
 
 # --- Background Audio Setup ---
 # Path to your background MP3 file (replace with your filename if needed)
@@ -360,12 +360,25 @@ Meta-Instructions for the Model
                                     await audio_out_queue.put(data)
                                     # logger.info(f"✅ Queued Gemini audio for Exotel (queue size: {audio_out_queue.qsize()})")
                                 
-                                # Check for text transcription
-                                if text := response.text:
-                                    logger.info(f"💬 Gemini text: {text}")
+                                # Manual text extraction to avoid warnings
+                                text = ''
+                                # First, try response.parts (common in SDK for content)
+                                if hasattr(response, 'parts'):
+                                    for part in response.parts:
+                                        if hasattr(part, 'text') and part.text:
+                                            text += part.text
+                                # Fallback: Check server_content structure (from Live API docs)
+                                elif hasattr(response, 'server_content') and response.server_content:
+                                    if hasattr(response.server_content, 'model_turn') and response.server_content.model_turn:
+                                        for part in response.server_content.model_turn.parts:
+                                            if hasattr(part, 'text') and part.text:
+                                                text += part.text
+
+                                if text:
+                                    logger.info(f"💬 Gemini text: {text.strip()}")
                                 
                                 # Check for token usage metadata
-                                if usage := response.usage_metadata:
+                                if usage := getattr(response, 'usage_metadata', None):
                                     input_tokens = getattr(usage, 'prompt_token_count', 0)
                                     output_tokens = getattr(usage, 'response_token_count', 0)
                                     total_tokens = getattr(usage, 'total_token_count', 0)
@@ -382,7 +395,7 @@ Meta-Instructions for the Model
                                     if hasattr(usage, 'response_tokens_details') and usage.response_tokens_details:
                                         logger.info("    Output token breakdown by modality:")
                                         for detail in usage.response_tokens_details:
-                                            if isinstance(detail, types.ModalityTokenCount):
+                                            if hasattr(detail, 'modality') and hasattr(detail, 'token_count'):
                                                 logger.info(f"    - {detail.modality}: {detail.token_count}")
                             
                             logger.info("🛑 Turn complete")
@@ -471,4 +484,5 @@ Meta-Instructions for the Model
     finally:
         logger.info("🧹 Cleaning up Exotel WebSocket connection")
 
+ 
  
